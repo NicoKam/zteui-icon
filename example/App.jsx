@@ -20,10 +20,11 @@ class App extends Component {
     return (
       <div>
         {
-          iconConfig.map((item) => (<div className={cx('icon-group')}>
+          iconConfig.map((item) => (<div key={item.title} className={cx('icon-group')}>
             <div className={cx('icon-group-title')}>{item.title}</div>
             <div className={cx('icon-group-content')}>{
               item.icons.map((icon) => (<div
+                key={icon.code}
                 className={cx('icon-box', { copied: icon.code === this.state.copiedCode })}
                 onClick={() => {
                   clipboard.writeText(`<Zcon type="${icon.code}" />`);
