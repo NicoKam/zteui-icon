@@ -1,9 +1,10 @@
 import ReactDOM from 'react-dom';
 import * as React from 'react';
-import Zcon from '../lib/Zcon';
+import App from './App';
+
 
 const render = () => {
-  ReactDOM.render(<Zcon type="shenfenzheng" />, document.getElementById('app'));
+  ReactDOM.render(<App />, document.getElementById('app'));
 };
 
 render();
