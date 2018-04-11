@@ -8,7 +8,7 @@ module.exports = {
     filename: 'bundle.js',
     // library: 'lib',
     // libraryTarget: 'umd',
-    path: `${__dirname}/example/build`,
+    path: `${__dirname}/docs`,
   },
   resolve: {
     // modules: ['node_modules', nodeModulesPath, srcPath],
