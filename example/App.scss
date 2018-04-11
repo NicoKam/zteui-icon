@@ -29,14 +29,14 @@ $prefix: app;
   }
 
   &copied {
-    color: #5f8eff !important;
+    color: #58a1ff !important;
     .#{$prefix}-btn-copy {
       opacity: 1;
     }
   }
   &icon-box:hover,
   &copied {
-    background-color: #447dff;
+    background-color: #3794ff;
     color: white;
 
   }
