@@ -28,4 +28,5 @@ import Zcon from 'zteui-icon';
 ```
 
 ### 图标列表
-[点此查看](https://nicokam.github.io/zteui-icon/)
+<iframe src="https://nicokam.github.io/zteui-icon/" width="888px"  frameborder="0"> </iframe>
+[点此查看](https://nicokam.github.io/zteui-icon/)完整页面

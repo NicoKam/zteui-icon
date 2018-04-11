@@ -11,17 +11,20 @@ $prefix: app;
   }
 
   &icon-box {
+    color: #555;
     position: relative;
     cursor: pointer;
     display: inline-block;
     width: 120px;
     text-align: center;
-    padding: 20px 20px;
+    padding: 10px;
     border-radius: 10px;
-    margin: 10px ;
+    margin: 10px;
     transition: color 0.4s;
+    vertical-align: top;
     .zteicon {
-      font-size: 30px;
+      font-size: 24px;
+      margin: 16px 0;
     }
   }
 
