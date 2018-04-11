@@ -28,4 +28,4 @@ import Zcon from 'zteui-icon';
 ```
 
 ### 图标列表
-[点此查看](https://nicokam.github.io/zteui-icon/example/build/index.html)
+[点此查看](https://nicokam.github.io/zteui-icon/)
