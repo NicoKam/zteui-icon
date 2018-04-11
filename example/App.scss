@@ -1,0 +1,52 @@
+$prefix: app;
+.#{$prefix}- {
+  &icon-group {
+    margin: 50px 50px;
+  }
+
+  &icon-group-title {
+    font-size: 30px;
+  }
+  &icon-group-content {
+  }
+
+  &icon-box {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 10px;
+    margin: 10px ;
+    transition: color 0.4s;
+    .zteicon {
+      font-size: 30px;
+    }
+  }
+
+  &copied {
+    color: #5f8eff !important;
+    .#{$prefix}-btn-copy {
+      opacity: 1;
+    }
+  }
+  &icon-box:hover,
+  &copied {
+    background-color: #447dff;
+    color: white;
+
+  }
+
+  &btn-copy {
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 100%;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    transition: opacity 0.4s;
+  }
+
+}

@@ -28,6 +28,8 @@
     "react-dom": ">=16.0.0"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "clipboard-polyfill": "^2.4.6",
     "lodash": "^4.17.5",
     "node-sass": "^4.8.3",
     "prop-types": "^15.6.1",

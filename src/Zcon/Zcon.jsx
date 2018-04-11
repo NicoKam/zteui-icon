@@ -7,17 +7,19 @@ import '../../assets/iconfont/iconfont.css';
 
 const PREFIX = 'zteicon';
 
-const fontSizeCache = {
-  default: 14,
-  large: 20,
-  small: 12,
-};
+
+const px = (clsName) => `${PREFIX}-${clsName}`;
 
 class Zcon extends Component {
+  isSpin() {
+    if (this.props.spin) return true;
+    return false;
+  }
+
   render() {
     return (
       <i
-        className={`${PREFIX} ${PREFIX}-${(this.props.type)} ${this.props.className || ''}`}
+        className={`${PREFIX} ${px(this.props.type)} ${this.isSpin() ? px('spin') : ''} ${this.props.className || ''}`}
         style={_.assign({}, this.props.style)}
       />
     );
@@ -26,9 +28,9 @@ class Zcon extends Component {
 
 Zcon.propTypes = {
   type: PropTypes.string.isRequired,
+  spin: PropTypes.bool,
 };
 
-Zcon.defaultProps = {
-};
+Zcon.defaultProps = {};
 
 export default Zcon;

@@ -13,3 +13,18 @@
 .zteicon:before {
     display: block;
 }
+
+.zteicon-spin:before {
+    display: inline-block;
+    -webkit-animation: zteiconLoadingCircle 1s infinite linear;
+    animation: zteiconLoadingCircle 1s infinite linear;
+}
+
+@keyframes zteiconLoadingCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
