@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "compile": "babel src -d lib -s",
-    "example": "npm run compile & webpack",
+    "example": "npm run compile & rm -r docs & webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

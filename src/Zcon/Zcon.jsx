@@ -10,9 +10,14 @@ const PREFIX = 'zteicon';
 
 const px = (clsName) => `${PREFIX}-${clsName}`;
 
+const spinDefault = [
+  'loading',
+]
+
 class Zcon extends Component {
   isSpin() {
     if (this.props.spin) return true;
+    if (this.props.spin === false) return false;
     return false;
   }
 
