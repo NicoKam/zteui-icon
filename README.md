@@ -16,6 +16,17 @@ or
 ```text
 cnpm install zteui-icon
 ```
+
+#### 更新
+当UED通知你图标库已更新，你可以使用下列代码更新该组件，并在项目中使用新图标
+```text
+npm update zteui-icon
+```
+or
+```text
+cnpm update zteui-icon
+```
+
 #### 引用
 ```javascript
 import Zcon from 'zteui-icon';
@@ -28,5 +39,4 @@ import Zcon from 'zteui-icon';
 ```
 
 ### 图标列表
-<iframe src="https://nicokam.github.io/zteui-icon/" width="888px"  frameborder="0"> </iframe>
-[点此查看](https://nicokam.github.io/zteui-icon/)完整页面
+[点此查看](https://nicokam.github.io/zteui-icon/)全部支持的图标
