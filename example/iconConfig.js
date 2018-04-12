@@ -1,9 +1,9 @@
 export default [
   {
-    title: '方向性图标',
+    title: 'ant-方向性图标',
     icons: [
-      { code: 'step-backward', text: '' },
-      { code: 'step-forward', text: '' },
+      { code: 'step-backward', text: '', tag: 'new' },
+      { code: 'step-forward', text: '', tag: '1.2.0' },
       { code: 'fast-backward', text: '' },
       { code: 'fast-forward', text: '' },
       { code: 'shrink', text: '' },
@@ -57,7 +57,7 @@ export default [
     ],
   },
   {
-    title: '提示建议性图标',
+    title: 'ant-提示建议性图标',
     icons: [
       { code: 'question', text: '' },
       { code: 'question-circle-o', text: '' },
@@ -97,7 +97,7 @@ export default [
     ],
   },
   {
-    title: '网站通用图标',
+    title: 'ant-网站通用图标',
     icons: [
       { code: 'lock', text: '' },
       { code: 'unlock', text: '' },

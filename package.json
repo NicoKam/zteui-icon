@@ -10,7 +10,7 @@
   "scripts": {
     "compile": "babel src -d lib -s",
     "example": "npm run compile & rm -r docs & webpack",
-    "iconfont": "npm run example & git add * & git commit -am \"update iconfonts\" & npm version minor & git commit -am \"update version\" & git push & npm publish",
+    "iconfont": "npm run example & git add * & git commit -am \"update iconfonts\" & npm version minor & git push & npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -4,7 +4,8 @@ $prefix: app;
     margin: 50px 50px;
   }
 
-  &icon-group-title {
+  &icon-group-title,
+  &copy-title {
     font-size: 24px;
   }
   &icon-group-content {
@@ -52,4 +53,38 @@ $prefix: app;
     transition: opacity 0.4s;
   }
 
+  &copy-name {
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    display: inline-block;
+    overflow: hidden;
+
+    &-item {
+      display: inline-block;
+      padding: 10px 0;
+      text-align: center;
+      width: 100px;
+      cursor: pointer;
+    }
+    .#{$prefix}-selected {
+      background-color: #3794ff;
+      color: white;
+    }
+  }
+
+  &icon-tag {
+    font-size: 10px;
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background-color: #ff1111;
+    color: white !important;
+    padding: 0px 4px;
+    border-radius: 10px;
+
+  }
+
+  &copy-ctrl {
+    margin: 20px 50px;
+  }
 }
