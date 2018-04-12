@@ -10,21 +10,21 @@ An icon component for ReactJS
 #### 安装
 你可以使用npm或cnpm
 ```text
-npm install zteui-icon
+npm install zteui-icon --save
 ```
 or
 ```text
-cnpm install zteui-icon
+cnpm install zteui-icon --save
 ```
 
 #### 更新
 当UED通知你图标库已更新，你可以使用下列代码更新该组件，并在项目中使用新图标
 ```text
-npm update zteui-icon
+npm update zteui-icon --save
 ```
 or
 ```text
-cnpm update zteui-icon
+cnpm update zteui-icon --save
 ```
 
 #### 引用
