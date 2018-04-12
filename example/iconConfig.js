@@ -1,9 +1,18 @@
 export default [
   {
+    title: '形状图标',
+    icons: [
+      { code: 'triangle-o', text: '', tag: 'new' },
+      { code: 'square-o', text: '', tag: 'new' },
+      { code: 'circle-o', text: '', tag: 'new' },
+      { code: 'shape-polygon-add', text: '', tag: 'new' },
+    ],
+  },
+  {
     title: 'ant-方向性图标',
     icons: [
-      { code: 'step-backward', text: '', tag: 'new' },
-      { code: 'step-forward', text: '', tag: '1.2.0' },
+      { code: 'step-backward', text: '' },
+      { code: 'step-forward', text: '' },
       { code: 'fast-backward', text: '' },
       { code: 'fast-forward', text: '' },
       { code: 'shrink', text: '' },
@@ -127,7 +136,6 @@ export default [
       { code: 'file-excel', text: '' },
       { code: 'file-jpg', text: '' },
       { code: 'file-ppt', text: '' },
-      { code: 'file-markdown', text: '' },
       { code: 'file-add', text: '' },
       { code: 'folder', text: '' },
       { code: 'folder-open', text: '' },
