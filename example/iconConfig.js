@@ -1,20 +1,20 @@
 export default [
   {
-    title: '未分类图标',
-    icons: [
-      { code: 'smart-search', text: '', tag: 'new' },
-      { code: 'precise-search', text: '', tag: 'new' },
-      { code: 'high-search', text: '', tag: 'new' },
-      { code: 'map', text: '', tag: 'new' },
-    ],
-  },
-  {
     title: '形状图标',
     icons: [
       { code: 'triangle-o', text: '', tag: 'new' },
       { code: 'square-o', text: '', tag: 'new' },
       { code: 'circle-o', text: '', tag: 'new' },
       { code: 'shape-polygon-add', text: '', tag: 'new' },
+    ],
+  },
+  {
+    title: '网站通用图标',
+    icons: [
+      { code: 'smart-search', text: '', tag: 'new' },
+      { code: 'precise-search', text: '', tag: 'new' },
+      { code: 'high-search', text: '', tag: 'new' },
+      { code: 'map', text: '', tag: 'new' },
     ],
   },
   {

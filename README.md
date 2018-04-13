@@ -9,6 +9,7 @@ An icon component for ReactJS
 ### 如何使用
 #### 安装
 你可以使用npm或cnpm进行安装
+
 当UED通知你图标库已更新，你同样可以再次安装以更新该组件，并在项目中使用新图标
 ```text
 npm install zteui-icon --save
