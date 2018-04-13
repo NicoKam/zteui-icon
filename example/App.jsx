@@ -22,6 +22,7 @@ class App extends Component {
     return (
       <div>
         <div className={cx('copy-ctrl')}>
+          <a href="https://github.com/NicoKam/zteui-icon">Project Home</a>
           <div className={cx('copy-title')}>复制组件名</div>
           <p>推荐使用 Zcon 作为标签与 antd 区分，当然，由于本组件已经将 antd 的所有图标都收集了，
             所以如果你使用了antd又不想大量修改你的代码时，你可以将</p>
