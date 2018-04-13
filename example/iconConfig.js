@@ -1,5 +1,14 @@
 export default [
   {
+    title: '未分类图标',
+    icons: [
+      { code: 'smart-search', text: '', tag: 'new' },
+      { code: 'precise-search', text: '', tag: 'new' },
+      { code: 'high-search', text: '', tag: 'new' },
+      { code: 'map', text: '', tag: 'new' },
+    ],
+  },
+  {
     title: '形状图标',
     icons: [
       { code: 'triangle-o', text: '', tag: 'new' },
