@@ -2,19 +2,22 @@ export default [
   {
     title: '形状图标',
     icons: [
-      { code: 'triangle-o', text: '', tag: 'new' },
-      { code: 'square-o', text: '', tag: 'new' },
-      { code: 'circle-o', text: '', tag: 'new' },
-      { code: 'shape-polygon-add', text: '', tag: 'new' },
+      { code: 'triangle-o', text: '' },
+      { code: 'square-o', text: '' },
+      { code: 'circle-o', text: '' },
+      { code: 'shape-polygon-add', text: '' },
     ],
   },
   {
     title: '网站通用图标',
     icons: [
-      { code: 'smart-search', text: '', tag: 'new' },
-      { code: 'precise-search', text: '', tag: 'new' },
-      { code: 'high-search', text: '', tag: 'new' },
-      { code: 'map', text: '', tag: 'new' },
+      { code: 'smart-search', text: '' },
+      { code: 'precise-search', text: '' },
+      { code: 'high-search', text: '' },
+      { code: 'map', text: '' },
+      { code: 'approval', text: '', tag: 'new' },
+      { code: 'sun-o', text: '', tag: 'new' },
+      { code: 'moon-o', text: '', tag: 'new' },
     ],
   },
   {
