@@ -18,6 +18,8 @@ export default [
       { code: 'approval', text: '', tag: 'new' },
       { code: 'sun-o', text: '', tag: 'new' },
       { code: 'moon-o', text: '', tag: 'new' },
+      { code: 'layers-simple-line', text: '', tag: 'new' },
+      { code: 'move', text: '', tag: 'new' },
     ],
   },
   {
