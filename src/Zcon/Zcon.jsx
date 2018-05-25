@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
@@ -23,10 +23,12 @@ class Zcon extends Component {
   }
 
   render() {
+    const { type, spin, className, ...otherProps } = this.props;
     return (
       <i
-        className={`${PREFIX} ${px(this.props.type)} ${this.isSpin() ? px('spin') : ''} ${this.props.className || ''}`}
-        style={_.assign({}, this.props.style)}
+        className={`${PREFIX} ${px(type)} ${this.isSpin() ? px('spin') : ''} ${className || ''}`}
+        style={_.assign({}, style)}
+        {...otherProps}
       />
     );
   }
