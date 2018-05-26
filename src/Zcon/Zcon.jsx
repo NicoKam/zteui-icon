@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
@@ -23,7 +23,9 @@ class Zcon extends Component {
   }
 
   render() {
-    const { type, spin, className, ...otherProps } = this.props;
+    const {
+      type, spin, style, className, ...otherProps
+    } = this.props;
     return (
       <i
         className={`${PREFIX} ${px(type)} ${this.isSpin() ? px('spin') : ''} ${className || ''}`}
