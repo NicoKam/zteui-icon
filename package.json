@@ -1,6 +1,6 @@
 {
   "name": "zteui-icon",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "An icon component for ReactJS.",
   "main": "lib/index.js",
   "files": [
@@ -8,7 +8,7 @@
     "lib"
   ],
   "scripts": {
-    "clean":"git fetch --all &  git reset --hard origin/master & git pull",
+    "clean": "git fetch --all &  git reset --hard origin/master & git pull",
     "compile": "babel src -d lib -s",
     "example": "npm run compile & rm -r docs & webpack",
     "upload": "npm run example & git add * & git commit -am \"update iconfonts\" & npm version minor & git push & npm publish",
