@@ -2,6 +2,11 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'track-point-blue', text: '', tag: 'new' },
+      { code: 'camera-point-samll', text: '', tag: 'new' },
+      { code: 'track-point-red', text: '', tag: 'new' },
+      { code: 'location-point-blue', text: '', tag: 'new' },
+      { code: 'location-point-red', text: '', tag: 'new' },
       { code: 'alarm', text: '', tag: 'new' },
       { code: 'train', text: '', tag: 'new' },
       { code: 'toll', text: '', tag: 'new' },

@@ -35,6 +35,11 @@ const svgDefault = [
   'in-conversation',
   'airport',
   'hotel',
+  'track-point-blue',
+  'camera-point-samll',
+  'track-point-red',
+  'location-point-blue',
+  'location-point-red',
 ];
 
 class Zcon extends Component {
