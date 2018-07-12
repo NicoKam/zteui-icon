@@ -30,6 +30,7 @@ const spinDefault = [
   'loading-3-quarters',
 ];
 
+/* 多色图标 */
 const svgDefault = [
   'in-conversation',
   'airport',

@@ -26,7 +26,7 @@ svg.zteicon {
        normalize.css 中也包含这行 */
     overflow: hidden;
 }
-svg.zteicon,
+svg.zteicon-spin,
 .zteicon-spin:before {
     display: inline-block;
     -webkit-animation: zteiconLoadingCircle 1s infinite linear;
