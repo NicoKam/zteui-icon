@@ -32,6 +32,7 @@ const spinDefault = [
 
 /* 多色图标 */
 const svgDefault = [
+  'police-avatar',
   'in-conversation',
   'airport',
   'hotel',
