@@ -41,6 +41,7 @@ export default [
   {
     title: '形状图标',
     icons: [
+      { code: 'polygon', text: '', tag: 'new' },
       { code: 'pack-up', text: '' },
       { code: 'pack-down', text: '' },
       { code: 'triangle-o', text: '' },
