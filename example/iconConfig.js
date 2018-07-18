@@ -2,6 +2,7 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'revoke-o', text: '', tag: 'new' },
       { code: 'police-avatar', text: '', tag: 'new' },
       { code: 'track-point-blue', text: '' },
       { code: 'camera-point-samll', text: '' },
