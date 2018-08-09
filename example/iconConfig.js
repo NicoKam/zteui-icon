@@ -53,7 +53,7 @@ export default [
     ],
   },
   {
-    title: '警务中台图标',
+    title: '特定图标',
     icons: [
       { code: 'location-reback', text: '' },
       { code: 'nodetial', text: '' },
