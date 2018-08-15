@@ -2,6 +2,12 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'location-point-solid', text: '', tag: 'new' },
+      { code: 'take-photo', text: '', tag: 'new' },
+      { code: 'img', text: '', tag: 'new' },
+      { code: 'voice-call', text: '', tag: 'new' },
+      { code: 'cancel-call', text: '', tag: 'new' },
+      { code: 'file-text-o', text: '', tag: 'new' },
       { code: 'record', text: '', tag: 'new' },
       { code: 'visiblerange', text: '', tag: 'new' },
       { code: 'sticking-point', text: '', tag: 'new' },

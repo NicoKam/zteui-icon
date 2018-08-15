@@ -26,9 +26,23 @@ import Zcon from 'zteui-icon';
 ```
 
 #### 使用
-使用 <Icon /> 标签声明组件，指定图标对应的 type 属性，示例代码如下:
+使用 Zcon 标签声明组件，指定图标对应的 type 属性，font-size样式调整大小，示例代码如下:
 ```html
 <Zcon type="link" />
+```
+
+spin 是否强制/取消旋转
+```html
+<Zcon type="link" spin />
+```
+
+svg 是否强制/取消svg模式
+```html
+<!-- svg模式会使颜色固定为默认颜色，不能修改，普通图标强制设为svg模式没有意义 -->
+<Zcon type="link" svg />
+
+<!-- （一般demo种彩色展示的是svg模式的图标）取消svg模式，会让图标丢失颜色信息，并接受color控制 -->
+<Zcon type="camera-point-samll" svg={false} style={{color: '#F00'}} />
 ```
 
 ### 图标列表
