@@ -2,6 +2,9 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'tie', text: '', tag: 'new' },
+      { code: 'star-customer', text: '', tag: 'new' },
+      { code: 'map-simple', text: '', tag: 'new' },
       { code: 'location-point-solid', text: '', tag: 'new' },
       { code: 'take-photo', text: '', tag: 'new' },
       { code: 'img', text: '', tag: 'new' },
