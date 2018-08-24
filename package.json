@@ -1,6 +1,6 @@
 {
   "name": "zteui-icon",
-  "version": "1.23.0",
+  "version": "1.24.0",
   "description": "An icon component for ReactJS.",
   "main": "lib/index.js",
   "files": [
@@ -32,7 +32,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "clipboard-polyfill": "^2.4.6",
-    "lodash": "^4.17.5",
     "node-sass": "^4.8.3",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",

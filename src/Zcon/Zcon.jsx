@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 
 
 import '../../assets/iconfont/iconfont';
@@ -53,13 +52,13 @@ class Zcon extends Component {
   isSpin() {
     if (this.props.spin) return true;
     if (this.props.spin === false) return false;
-    return _.includes(spinDefault, this.props.type);
+    return spinDefault.includes(this.props.type);
   }
 
   isSvg() {
     if (this.props.svg) return true;
     if (this.props.svg === false) return false;
-    return _.includes(svgDefault, this.props.type);
+    return svgDefault.includes(this.props.type);
   }
 
   render() {
@@ -81,7 +80,7 @@ class Zcon extends Component {
     return (
       <i
         className={`${PREFIX} ${classnames(type, { spin: this.isSpin() })} ${className || ''}`}
-        style={_.assign({}, style)}
+        style={Object.assign({}, style)}
         {...otherProps}
       />
     );

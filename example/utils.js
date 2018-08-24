@@ -1,11 +1,10 @@
 import classnames from 'classnames';
-import _ from 'lodash';
 
 export default {
   classnames: (prefix, styles) => {
     const cx = classnames.bind(styles);
     return (...names) =>
-      cx(_.map(names, name => {
+      cx(names.map(name => {
         if (typeof name === 'string') {
           return `${prefix}-${name}`;
         } else if (typeof name === 'object') {
