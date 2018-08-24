@@ -41,6 +41,12 @@ const svgDefault = [
   'track-point-red',
   'location-point-blue',
   'location-point-red',
+  'judicial-circle-hover',
+  'judicial-circle',
+  'location-blue',
+  'gun-bubble-blue',
+  'gun-bubble-white',
+  'gun-bubble-black',
 ];
 
 class Zcon extends Component {
