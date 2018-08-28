@@ -2,6 +2,8 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'personnel-data', text: '', tag: 'new' },
+      { code: 'mediation-power', text: '', tag: 'new' },
       { code: 'all', text: '', tag: 'new' },
       { code: 'prove', text: '', tag: 'new' },
       { code: 'job', text: '', tag: 'new' },
