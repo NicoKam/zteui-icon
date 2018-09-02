@@ -11,7 +11,7 @@
     "clean": "git fetch --all &  git reset --hard origin/master & git pull",
     "compile": "babel src -d lib -s",
     "example": "npm run compile & rm -r docs & webpack",
-    "upload": "npm run example & git add * & git commit -am \"update iconfonts\" & npm version minor & git push & npm publish",
+    "upload": "npm run example && git add * && git commit -am \"update iconfonts\" && npm version minor && git push & npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

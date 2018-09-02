@@ -2,6 +2,7 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'gun-rotate', text: '', tag: 'new' },
       { code: 'video-command', text: '', tag: 'new' },
       { code: 'head-analysis', text: '', tag: 'new' },
       { code: 'total-records', text: '', tag: 'new' },
