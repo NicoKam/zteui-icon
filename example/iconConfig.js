@@ -2,6 +2,7 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'cb-logo', text: '', tag: 'new' },
       { code: 'video-speed', text: '', tag: 'new' },
       { code: 'gun-rotate', text: '' },
       { code: 'video-command', text: '' },
