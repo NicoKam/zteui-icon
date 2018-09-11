@@ -88,6 +88,8 @@ class Zcon extends Component {
 }
 
 Zcon.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   type: PropTypes.string.isRequired,
   spin: PropTypes.bool,
   svg: PropTypes.bool,

@@ -28,12 +28,16 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/mouse-events-have-key-events': 0,
     'no-mixed-operators': 0,
-    'react/prop-types': [1, { ignore: ['children'], customValidators: [] }],
+    'react/prop-types': [1, {
+      ignore: ['children'],
+      customValidators: []
+    }],
     'react/no-array-index-key': 1,
     'no-underscore-dangle': 1,
     'no-unused-vars': 1,
     'space-before-blocks': 1,
     'jsx-a11y/no-static-element-interactions': 0,
-    'no-return-assign':1,
+    'no-return-assign': 1,
+    'react/forbid-prop-type': 0,
   },
 };
