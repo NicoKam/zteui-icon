@@ -2,6 +2,7 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'message-bell', text: '', tag: 'new' },
       { code: 'gesture', text: '', tag: 'new' },
       { code: 'discern', text: '', tag: 'new' },
       { code: 'cb-logo', text: '', tag: 'new' },
