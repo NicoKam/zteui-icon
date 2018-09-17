@@ -2,10 +2,14 @@ export default [
   {
     title: '网站通用图标',
     icons: [
-      { code: 'message-bell', text: '', tag: 'new' },
-      { code: 'gesture', text: '', tag: 'new' },
-      { code: 'discern', text: '', tag: 'new' },
-      { code: 'cb-logo', text: '', tag: 'new' },
+      { code: 'pointer-move', text: '', tag: 'new' },
+      { code: 'screenshot', text: '', tag: 'new' },
+      { code: 'zoom-in', text: '', tag: 'new' },
+      { code: 'zoom-out', text: '', tag: 'new' },
+      { code: 'message-bell', text: '' },
+      { code: 'gesture', text: '' },
+      { code: 'discern', text: '' },
+      { code: 'cb-logo', text: '' },
       { code: 'video-speed', text: '' },
       { code: 'gun-rotate', text: '' },
       { code: 'video-command', text: '' },
