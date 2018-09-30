@@ -2,6 +2,10 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'all-1', text: '', tag: 'new' },
+      { code: 'industry-circle', text: '', tag: 'new' },
+      { code: 'security-circle', text: '', tag: 'new' },
+      { code: 'disputes-circle', text: '', tag: 'new' },
       { code: 'traffic', text: '', tag: 'new' },
       { code: 'location-point-gray', text: '' },
       { code: 'bicycle', text: '' },
