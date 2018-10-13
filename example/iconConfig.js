@@ -2,6 +2,7 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'indoor-map', text: '', tag: 'new' },
       { code: 'face-recognition', text: '', tag: 'new' },
       { code: 'all-1', text: ''},
       { code: 'industry-circle', text: ''},
