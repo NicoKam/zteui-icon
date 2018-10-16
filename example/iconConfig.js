@@ -2,10 +2,11 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'gun-camera', text: '', tag: 'new' },
       { code: 'live-video', text: '', tag: 'new' },
       { code: 'playback-video', text: '', tag: 'new' },
-      { code: 'indoor-map', text: '', tag: 'new' },
-      { code: 'face-recognition', text: '', tag: 'new' },
+      { code: 'indoor-map', text: '' },
+      { code: 'face-recognition', text: '' },
       { code: 'all-1', text: '' },
       { code: 'industry-circle', text: '' },
       { code: 'security-circle', text: '' },
