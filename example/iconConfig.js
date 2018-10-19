@@ -2,6 +2,7 @@ export default [
   {
     title: '网站通用图标',
     icons: [
+      { code: 'compass-solid', text: '', tag: 'new' },
       { code: 'narrow', text: '', tag: 'new' },
       { code: 'extend', text: '', tag: 'new' },
       { code: 'gun-camera', text: '', tag: 'new' },
