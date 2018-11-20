@@ -1,6 +1,6 @@
 {
   "name": "zteui-icon",
-  "version": "1.49.0",
+  "version": "1.50.0",
   "description": "An icon component for ReactJS.",
   "main": "lib/index.js",
   "files": [
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "clean": "git fetch --all &  git reset --hard origin/master & git pull",
-    "compress":" node compressIconfont.js",
+    "compress": " node compressIconfont.js",
     "compile": "babel src -d lib -s",
     "example": "npm run compress && npm run compile & rm -r docs & webpack",
     "upload": "npm run example && git add * --ignore-errors && git commit -am \"update iconfonts\" && npm version minor && git push && npm publish",
