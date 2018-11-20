@@ -1,5 +1,7 @@
+/* eslint-disable react/forbid-prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import svgDefault from './svgIcon';
 
 
 import '../../assets/iconfont/iconfont';
@@ -29,25 +31,6 @@ const spinDefault = [
   'loading-3-quarters',
 ];
 
-/* 多色图标 */
-const svgDefault = [
-  'police-avatar',
-  'in-conversation',
-  'airport',
-  'hotel',
-  'track-point-blue',
-  'camera-point-samll',
-  'track-point-red',
-  'location-point-blue',
-  'location-point-red',
-  'judicial-circle-hover',
-  'judicial-circle',
-  'location-blue',
-  'gun-bubble-blue',
-  'gun-bubble-white',
-  'gun-bubble-black',
-];
-
 class Zcon extends Component {
   isSpin() {
     if (this.props.spin) return true;
@@ -56,20 +39,22 @@ class Zcon extends Component {
   }
 
   isSvg() {
-    if (this.props.svg) return true;
     if (this.props.svg === false) return false;
+    // if (this.props.svg && svgDefault.includes(this.props.type)) return true;
     return svgDefault.includes(this.props.type);
   }
 
   render() {
     const {
-      type, spin, svg, style, className, ...otherProps
+      type, spin, svg, style, className, antCls, ...otherProps
     } = this.props;
+
+    const prefixCls = `${PREFIX} ${antCls ? 'anticon' : ''}`;
 
     if (this.isSvg()) {
       return (
         <svg
-          className={`${PREFIX} ${classnames({ spin: this.isSpin() })} ${className || ''}`}
+          className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ''}`}
           aria-hidden="true"
         >
           <use xlinkHref={`#${px(type)}`} />
@@ -79,7 +64,7 @@ class Zcon extends Component {
 
     return (
       <i
-        className={`${PREFIX} ${classnames(type, { spin: this.isSpin() })} ${className || ''}`}
+        className={`${prefixCls} ${classnames(type, { spin: this.isSpin() })} ${className || ''}`}
         style={Object.assign({}, style)}
         {...otherProps}
       />
@@ -90,11 +75,14 @@ class Zcon extends Component {
 Zcon.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  antCls: PropTypes.bool,
   type: PropTypes.string.isRequired,
   spin: PropTypes.bool,
   svg: PropTypes.bool,
 };
 
-Zcon.defaultProps = {};
+Zcon.defaultProps = {
+  antCls: true,
+};
 
 export default Zcon;

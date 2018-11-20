@@ -87,4 +87,8 @@ $prefix: app;
   &copy-ctrl {
     margin: 20px 50px;
   }
+
+  &deprecated{
+    background-color: #ff7300;
+  }
 }

@@ -1,17 +1,45 @@
+/* 这里是因为宽高不规范而不推荐使用的图标 */
+export const deprecated = ['all-1', 'disputes-circle', 'bicycle', 'cpu', 'video-speed', 'personnel-data', 'mediation-power', 'all', 'prove', 'job', 'take-photo', 'img', 'loopline', 'warnning-o', 'revoke-o', 'toll', 'switch', 'shot', 'smart-glass', 'perception', 'no-img', 'panoramic-camera', 'pack-up', 'pack-down', 'monitor', 'gun', 'feedback', 'empty-box', 'vioce', 'speed-portrait', 'send', 'mute', 'location', 'location-person', 'height', 'full-screen', 'cut-picture', 'move', 'heart', 'heart-o', 'backward'];
+
+
 export default [
+  {
+    title: 'logo',
+    icons: [
+      { code: 'taoan', text: '', tag: 'new' },
+    ],
+  },
   {
     title: 'taoan',
     icons: [
-      { code: 'store-o', text: '', tag: 'new' },
+      { code: 'mail-circle', text: '', tag: 'new' },
       { code: 'multiplayer-o', text: '', tag: 'new' },
+      { code: 'install-o', text: '', tag: 'new' },
+      { code: 'store-o', text: '', tag: 'new' },
+      { code: 'computer-desktop-o', text: '', tag: 'new' },
+      { code: 'computer-chart-o', text: '', tag: 'new' },
+      { code: 'flag-circle', text: '', tag: 'new' },
+      { code: 'prompt-circle', text: '', tag: 'new' },
+      { code: 'alarm-circle', text: '', tag: 'new' },
+      { code: 'order-number-circle', text: '', tag: 'new' },
+      { code: 'renovate', text: '', tag: 'new' },
+      { code: 'pitch-on', text: '', tag: 'new' },
+      { code: 'rise', text: '', tag: 'new' },
+      { code: 'decline', text: '', tag: 'new' },
+      { code: 'remind-circle', text: '', tag: 'new' },
+      { code: 'order-rectangular', text: '', tag: 'new' },
+      { code: 'market-p', text: '', tag: 'new' },
+      { code: 'market-y', text: '', tag: 'new' },
+      { code: 'user-manage-b', text: '', tag: 'new' },
+      { code: 'advert-b', text: '', tag: 'new' },
+      { code: 'order-b', text: '', tag: 'new' },
+      { code: 'bill-b', text: '', tag: 'new' },
+      { code: 'add-b', text: '', tag: 'new' },
       { code: 'service-o', text: '', tag: 'new' },
       { code: 'safety-o', text: '', tag: 'new' },
       { code: 'region-o', text: '', tag: 'new' },
-      { code: 'install-o', text: '', tag: 'new' },
-      { code: 'computer-desktop-o', text: '', tag: 'new' },
       { code: 'order-list', text: '', tag: 'new' },
       { code: 'finance-o', text: '', tag: 'new' },
-      { code: 'computer-chart-o', text: '', tag: 'new' },
     ],
   },
   {

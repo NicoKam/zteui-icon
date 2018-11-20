@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import clipboard from 'clipboard-polyfill';
-import iconConfig from './iconConfig';
+import iconConfig, { deprecated } from './iconConfig';
 import utils from './utils';
 import Zcon from '../lib/Zcon';
 import './App.scss';
 
 const PREFIX = 'app';
 const cx = utils.classnames(PREFIX);
+
+const deprecatedCache = {};
+const isDeprecated = (key) => !!deprecatedCache[key];
+
+deprecated.forEach((key) => {
+  deprecatedCache[key] = true;
+});
 
 class App extends Component {
   constructor(props) {
@@ -17,8 +24,17 @@ class App extends Component {
     });
   }
 
+  renderTag = (icon) => {
+    if (isDeprecated(icon.code)) {
+      return <div className={cx('icon-tag', 'deprecated')}>非矩形</div>;
+    }
+    return icon.tag ? <div className={cx('icon-tag')}>{icon.tag}</div> : undefined;
+  };
+
 
   render() {
+    const { copiedCode, prefix } = this.state;
+
     return (
       <div>
         <div className={cx('copy-ctrl')}>
@@ -31,14 +47,14 @@ class App extends Component {
           <p> import Icon from &#x27;zteui-icon&#x27;;</p>
           <div className={cx('copy-name')}>
             <div
-              className={cx('copy-name-item', { selected: this.state.prefix === 'Zcon' })}
+              className={cx('copy-name-item', { selected: prefix === 'Zcon' })}
               onClick={() => {
                 this.setState({ prefix: 'Zcon' });
               }}
             >Zcon
             </div>
             <div
-              className={cx('copy-name-item', { selected: this.state.prefix === 'Icon' })}
+              className={cx('copy-name-item', { selected: prefix === 'Icon' })}
               onClick={() => {
                 this.setState({ prefix: 'Icon' });
               }}
@@ -52,9 +68,9 @@ class App extends Component {
             <div className={cx('icon-group-content')}>{
               item.icons.map((icon) => (<div
                 key={icon.code}
-                className={cx('icon-box', { copied: icon.code === this.state.copiedCode })}
+                className={cx('icon-box', { copied: icon.code === copiedCode })}
                 onClick={() => {
-                  clipboard.writeText(`<${this.state.prefix} type="${icon.code}" />`);
+                  clipboard.writeText(`<${prefix} type="${icon.code}" />`);
                   this.setState({
                     copiedCode: icon.code,
                   });
@@ -69,7 +85,7 @@ class App extends Component {
               >
                 <Zcon type={icon.code} />
                 <div className={cx('btn-copy')}>已复制</div>
-                {icon.tag ? <div className={cx('icon-tag')}>{icon.tag}</div> : null}
+                {this.renderTag(icon)}
                 <div className={cx('icon-title')}>{icon.text}</div>
                 <div className={cx('icon-code')}>{icon.code}</div>
               </div>))
