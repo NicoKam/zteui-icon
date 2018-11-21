@@ -82,7 +82,7 @@ Zcon.propTypes = {
 };
 
 Zcon.defaultProps = {
-  antCls: true,
+  antCls: false,
 };
 
 export default Zcon;
