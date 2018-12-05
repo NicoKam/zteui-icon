@@ -3,7 +3,7 @@ import clipboard from 'clipboard-polyfill';
 import iconConfig, { deprecated } from './iconConfig';
 import utils from './utils';
 import Zcon from '../lib/Zcon';
-import './App.scss';
+import './App.less';
 
 const PREFIX = 'app';
 const cx = utils.classnames(PREFIX);

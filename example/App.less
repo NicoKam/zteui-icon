@@ -1,5 +1,5 @@
-$prefix: app;
-.#{$prefix}- {
+@prefix: app;
+.@{prefix}- {
   &icon-group {
     margin: 50px 50px;
   }
@@ -24,14 +24,14 @@ $prefix: app;
     transition: color 0.4s;
     vertical-align: top;
     .zteicon {
-      font-size: 24px;
+      font-size: 34px;
       margin: 16px 0;
     }
   }
 
   &copied {
     color: #58a1ff !important;
-    .#{$prefix}-btn-copy {
+    .@{prefix}-btn-copy {
       opacity: 1;
     }
   }
@@ -66,7 +66,7 @@ $prefix: app;
       width: 100px;
       cursor: pointer;
     }
-    .#{$prefix}-selected {
+    .@{prefix}-selected {
       background-color: #3794ff;
       color: white;
     }
