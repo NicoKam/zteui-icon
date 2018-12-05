@@ -6,6 +6,8 @@ export default [
   {
     title: '未分类',
     icons: [
+      { code: 'track-curve', text: '', tag: 'new' },
+      { code: 'track-straight', text: '', tag: 'new' },
       { code: 'delete-circle-o', text: '', tag: 'new' },
       { code: 'alipay-circle', text: '', tag: 'new' },
       { code: 'weibo-circle', text: '', tag: 'new' },
