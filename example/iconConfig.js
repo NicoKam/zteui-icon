@@ -6,6 +6,7 @@ export default [
   {
     title: '未分类',
     icons: [
+      { code: 'face', text: '', tag: 'new' },
       { code: 'out-door', text: '', tag: 'new' },
       { code: 'stop-video', text: '', tag: 'new' },
       { code: 'save-video', text: '', tag: 'new' },
