@@ -9,10 +9,10 @@
   ],
   "scripts": {
     "clean": "git fetch --all &  git reset --hard origin/master & git pull",
-    "compress": " node compressIconfont.js",
-    "compile": "babel src -d lib -s",
-    "example": "npm run compress && npm run compile & rm -r docs & webpack",
-    "upload": "nrm use npm && npm run example && git add * --ignore-errors && git commit -am \"update iconfonts\" && npm version minor && git push && npm publish",
+    "compress": "node compressIconfont.js",
+    "compile": "npm run compress && babel src -d lib -s",
+    "example": "npm run compile && rm -r docs && webpack",
+    "upload": "nrm use npm && npm run compile && git add * --ignore-errors && git commit -am \"update iconfonts\" && npm version minor && git push && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

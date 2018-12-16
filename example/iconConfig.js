@@ -6,6 +6,7 @@ export default [
   {
     title: '未分类',
     icons: [
+      { code: 'shield-security', text: '', tag: 'new' },
       { code: 'others-camera', text: '', tag: 'new' },
       { code: 'face', text: '', tag: 'new' },
       { code: 'out-door', text: '', tag: 'new' },
