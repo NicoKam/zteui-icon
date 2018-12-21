@@ -45,5 +45,3 @@ svg 是否强制/取消svg模式
 <Zcon type="camera-point-samll" svg={false} style={{color: '#F00'}} />
 ```
 
-### 图标列表
-[点此查看](https://nicokam.github.io/zteui-icon/)全部支持的图标
