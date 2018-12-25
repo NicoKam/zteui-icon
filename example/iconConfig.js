@@ -7,7 +7,7 @@ export default [
     title: '未分类',
     icons: [
       { code: 'sim-card', text: '', tag: 'new' },
-      { code: 'copy-add', text: '', tag: 'new' },
+      { code: 'batch-import', text: '', tag: 'new' },
       { code: 'police-portrait', text: '', tag: 'new' },
       { code: 'shield-security', text: '' },
       { code: 'others-camera', text: '' },
