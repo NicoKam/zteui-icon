@@ -56,6 +56,8 @@ class Zcon extends Component {
         <svg
           className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ''}`}
           aria-hidden="true"
+          style={Object.assign({}, style)}
+          {...otherProps}
         >
           <use xlinkHref={`#${px(type)}`} />
         </svg>

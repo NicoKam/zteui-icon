@@ -17,4 +17,5 @@ module.exports = [
   'gun-bubble-black',
   'market-p',
   'market-y',
+  'police-portrait',
 ];
