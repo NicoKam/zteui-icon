@@ -6,6 +6,10 @@ export default [
   {
     title: '未分类',
     icons: [
+      { code: 'id-circle', text: '', tag: 'new' },
+      { code: 'rfid', text: '', tag: 'new' },
+      { code: 'gate-brake', text: '', tag: 'new' },
+      { code: 'download-video', text: '', tag: 'new' },
       { code: 'sim-card', text: '', tag: 'new' },
       { code: 'batch-import', text: '', tag: 'new' },
       { code: 'police-portrait', text: '', tag: 'new' },
