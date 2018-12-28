@@ -11,7 +11,7 @@ module.exports = {
   },
   env: {
     browser: true,
-    mocha: true,
+    // mocha: true,
     es6: true,
   },
   rules: {
@@ -19,7 +19,7 @@ module.exports = {
     'class-methods-use-this': 0,
     'jsx-a11y/click-events-have-key-events': 0,
     'no-restricted-syntax': 0,
-    'react/jsx-closing-tag-location': 0,
+    'react/jsx-closing-tag-location': 2,
     'arrow-parens': 0,
     'react/prefer-stateless-function': 0,
     'react/require-default-props': 0,
@@ -28,16 +28,19 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/mouse-events-have-key-events': 0,
     'no-mixed-operators': 0,
-    'react/prop-types': [1, {
-      ignore: ['children'],
-      customValidators: []
-    }],
+    'react/prop-types': [1, { ignore: ['children'], customValidators: [] }],
     'react/no-array-index-key': 1,
     'no-underscore-dangle': 1,
     'no-unused-vars': 1,
     'space-before-blocks': 1,
     'jsx-a11y/no-static-element-interactions': 0,
     'no-return-assign': 1,
-    'react/forbid-prop-type': 0,
+    'object-curly-newline': 0,
+    'arrow-body-style': 0,
+    'react/jsx-filename-extension': 0,
+    'react/sort-comp': 0,
+    'react/jsx-one-expression-per-line': 2,
+    'react/forbid-prop-types': 0,
+    'quotes': [2, 'double'],
   },
 };
