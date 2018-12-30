@@ -6,6 +6,8 @@ export default [
   {
     title: "未分类",
     icons: [
+      { code: "avatar-circle", text: "", tag: "new" },
+      { code: "cancel-square-o", text: "", tag: "new" },
       { code: "setting-circle-o", text: "", tag: "new" },
       { code: "setting-o", text: "", tag: "new" },
       { code: "scope-setting-o", text: "", tag: "new" },
