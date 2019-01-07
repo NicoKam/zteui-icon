@@ -1,16 +1,20 @@
 /* 这里是因为宽高不规范而不推荐使用的图标 */
-export const deprecated = ["all-1", "disputes-circle", "bicycle", "cpu", "video-speed", "personnel-data", "mediation-power", "all", "prove", "job", "take-photo", "img", "loopline", "warnning-o", "revoke-o", "toll", "switch", "shot", "smart-glass", "perception", "no-img", "panoramic-camera", "pack-up", "pack-down", "monitor", "gun", "feedback", "empty-box", "vioce", "speed-portrait", "send", "mute", "location", "location-person", "height", "full-screen", "cut-picture", "move", "heart", "heart-o", "backward"];
+export const deprecated = ["all-1", "disputes-circle", "bicycle", "cpu", "video-speed", "personnel-data", "mediation-power", "all", "prove", "job", "take-photo", "img", "loopline", "warning-o", "revoke-o", "toll", "switch", "shot", "smart-glass", "perception", "no-img", "panoramic-camera", "pack-up", "pack-down", "monitor", "gun", "feedback", "empty-box", "vioce", "speed-portrait", "send", "mute", "location", "location-person", "height", "full-screen", "cut-picture", "move", "heart", "heart-o", "backward"];
 
 
 export default [
   {
     title: "未分类",
     icons: [
+      { code: "id-card-o", text: "", tag: "new" },
       { code: "iot", text: "", tag: "new" },
       { code: "mac-icon", text: "", tag: "new" },
-      { code: "cellphone-mac", text: "", tag: "new" },
       { code: "horn", text: "", tag: "new" },
       { code: "avatar-default-circle", text: "", tag: "new" },
+      { code: "cellphone-mac", text: "", tag: "new" },
+      { code: "simcard", text: "", tag: "new" },
+      { code: "cellphone-imsi", text: "", tag: "new" },
+      { code: "qq-icon", text: "", tag: "new" },
       { code: "avatar-circle", text: "", tag: "new" },
       { code: "cancel-square-o", text: "" },
       { code: "setting-circle-o", text: "" },
@@ -20,7 +24,7 @@ export default [
       { code: "picture-1", text: "" },
       { code: "task-o", text: "" },
       { code: "target-o", text: "" },
-      { code: "identity-o", text: "" },
+      { code: "identity-o", text: "", tag: "resize" },
       { code: "order-o", text: "" },
       { code: "engine-o", text: "" },
       { code: "id-circle", text: "" },
@@ -189,12 +193,12 @@ export default [
       { code: "relation", text: "" },
       { code: "profile-1", text: "" },
       { code: "judicial", text: "" },
-      { code: "warnning-o", text: "" },
+      { code: "warning-o", text: "" },
       { code: "call-close", text: "" },
       { code: "revoke-o", text: "" },
       { code: "police-avatar", text: "" },
       { code: "track-point-blue", text: "" },
-      { code: "camera-point-samll", text: "" },
+      { code: "camera-point-small", text: "" },
       { code: "track-point-red", text: "" },
       { code: "location-point-blue", text: "" },
       { code: "location-point-red", text: "" },

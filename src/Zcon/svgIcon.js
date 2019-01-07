@@ -5,7 +5,7 @@ module.exports = [
   "airport",
   "hotel",
   "track-point-blue",
-  "camera-point-samll",
+  "camera-point-small",
   "track-point-red",
   "location-point-blue",
   "location-point-red",

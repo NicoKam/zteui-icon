@@ -1,4 +1,6 @@
 export default {
+  "warnning-o": "warning-o",
+  "camera-point-samll": "camera-point-small",
   "delete-circle-o": "delete-o",
   "voice-circle": "voice",
   "picture-circle": "picture",
