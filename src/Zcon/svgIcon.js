@@ -19,4 +19,5 @@ module.exports = [
   "market-y",
   "police-portrait",
   "avatar-circle",
+  "avatar-default-circle",
 ];
