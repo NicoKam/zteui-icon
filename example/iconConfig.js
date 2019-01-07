@@ -8,6 +8,7 @@ export default [
     icons: [
       { code: "iot", text: "", tag: "new" },
       { code: "mac-icon", text: "", tag: "new" },
+      { code: "cellphone-mac", text: "", tag: "new" },
       { code: "horn", text: "", tag: "new" },
       { code: "avatar-default-circle", text: "", tag: "new" },
       { code: "avatar-circle", text: "", tag: "new" },
