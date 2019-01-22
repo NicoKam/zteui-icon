@@ -12,17 +12,17 @@ An icon component for ReactJS
 
 当UED通知你图标库已更新，你同样可以再次安装以更新该组件，并在项目中使用新图标
 ```text
-npm install zteui-icon --save
+npm install @cbd/icon --save
 ```
 or
 ```text
-cnpm install zteui-icon --save
+cnpm install @cbd/icon --save
 ```
 
 
 #### 引用
 ```javascript
-import Zcon from 'zteui-icon';
+import Zcon from '@';
 ```
 
 #### 使用
