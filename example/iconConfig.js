@@ -1,12 +1,17 @@
 /* 这里是因为宽高不规范而不推荐使用的图标 */
 export const deprecated = ["all-1", "disputes-circle", "bicycle", "cpu", "video-speed", "personnel-data", "mediation-power", "all", "prove", "job", "take-photo", "img", "loopline", "warning-o", "revoke-o", "toll", "switch", "shot", "smart-glass", "perception", "no-img", "panoramic-camera", "pack-up", "pack-down", "monitor", "gun", "feedback", "empty-box", "vioce", "speed-portrait", "send", "mute", "location", "location-person", "height", "full-screen", "cut-picture", "move", "heart", "heart-o", "backward"];
 
-
 export default [
   {
     title: "未分类",
     icons: [
+      { code: "image-upload-tips", text: "", tag: "new" },
+      { code: "video-o", text: "", tag: "new" },
+      { code: "equipment-o", text: "", tag: "new" },
+      { code: "data-source-polygon", text: "", tag: "new" },
+      { code: "audio-o", text: "", tag: "new" },
       { code: "ga", text: "", tag: "new" },
+      { code: "api-logo", text: "", tag: "new" },
       { code: "monitor-o", text: "" },
       { code: "get-back", text: "" },
       { code: "scope", text: "" },
