@@ -5,6 +5,7 @@ export default [
   {
     title: "未分类",
     icons: [
+      { code: "font-format", text: "", tag: "new" },
       { code: "image-upload-tips", text: "", tag: "new" },
       { code: "video-o", text: "", tag: "new" },
       { code: "equipment-o", text: "", tag: "new" },
