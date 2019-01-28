@@ -21,4 +21,6 @@ module.exports = [
   "avatar-circle",
   "avatar-default-circle",
   "image-upload-tips",
+  "order-state-finished",
+  "order-state-pending",
 ];
