@@ -5,6 +5,8 @@ export default [
   {
     title: "未分类",
     icons: [
+      { code: "up-o", text: "", tag: "new" },
+      { code: "left-o", text: "", tag: "new" },
       { code: "parallel", text: "", tag: "new" },
       { code: "swm-pool", text: "", tag: "new" },
       { code: "manual", text: "", tag: "new" },
