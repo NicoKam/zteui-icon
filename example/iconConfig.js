@@ -5,6 +5,8 @@ export default [
   {
     title: "未分类",
     icons: [
+      { code: "camera-fuse", text: "", tag: "new" },
+      { code: "sticking-remove", text: "", tag: "new" },
       { code: "upload-o", text: "", tag: "new" },
       { code: "picture-o", text: "", tag: "new" },
       { code: "line-chart-1", text: "", tag: "new" },
