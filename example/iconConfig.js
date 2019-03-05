@@ -5,6 +5,7 @@ export default [
   {
     title: "未分类",
     icons: [
+      { code: "smoke-detector", text: "", tag: "new" },
       { code: "camera-fuse", text: "", tag: "new" },
       { code: "sticking-remove", text: "", tag: "new" },
       { code: "upload-o", text: "", tag: "new" },
