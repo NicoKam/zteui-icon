@@ -20,4 +20,7 @@ module.exports = [
   "police-portrait",
   "avatar-circle",
   "avatar-default-circle",
+  "image-upload-tips",
+  "order-state-finished",
+  "order-state-pending",
 ];

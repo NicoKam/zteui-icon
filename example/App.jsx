@@ -44,7 +44,7 @@ class App extends Component {
             所以如果你使用了antd又不想大量修改你的代码时，你可以将</p>
           <p> import&nbsp;&#123; Icon &#125; from &#x27;antd&#x27;;</p>
           <p> 替换为 </p>
-          <p> import Icon from &#x27;zteui-icon&#x27;;</p>
+          <p> import Icon from &#x27;@cbd/icon&#x27;;</p>
           <div className={cx('copy-name')}>
             <div
               className={cx('copy-name-item', { selected: prefix === 'Zcon' })}
