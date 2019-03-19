@@ -23,4 +23,5 @@ module.exports = [
   "image-upload-tips",
   "order-state-finished",
   "order-state-pending",
+  "profile-photo",
 ];
