@@ -7,7 +7,7 @@ import deprecatedIcon from "./deprecatedIcon";
 
 import "../../assets/iconfont/iconfont";
 import "../../assets/Zcon.css";
-import "../../assets/iconfont/iconfont.css";
+// import "../../assets/iconfont/iconfont.css";
 
 const PREFIX = "zteicon";
 
@@ -68,30 +68,28 @@ class Zcon extends Component {
     const {
       spin, svg, style, className, antCls, ...otherProps
     } = this.props;
-    const type = this.getType()
+    const type = this.getType();
 
     const prefixCls = `${PREFIX} ${antCls ? "anticon" : ""}`;
 
-    if (this.isSvg()) {
-      return (
-        <svg
-          className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ""}`}
-          aria-hidden="true"
-          style={Object.assign({}, style)}
-          {...otherProps}
-        >
-          <use xlinkHref={`#${px(type)}`} />
-        </svg>
-      );
-    }
-
     return (
-      <i
-        className={`${prefixCls} ${classnames(type, { spin: this.isSpin() })} ${className || ""}`}
+      <svg
+        className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ""}`}
+        aria-hidden="true"
         style={Object.assign({}, style)}
         {...otherProps}
-      />
+      >
+        <use xlinkHref={`#${px(type)}`} />
+      </svg>
     );
+
+    // return (
+    //   <i
+    //     className={`${prefixCls} ${classnames(type, { spin: this.isSpin() })} ${className || ""}`}
+    //     style={Object.assign({}, style)}
+    //     {...otherProps}
+    //   />
+    // );
   }
 }
 

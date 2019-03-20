@@ -1,3 +1,3 @@
-import Zcon from './Zcon';
+import Zcon from "./Zcon";
 
 export default Zcon;
