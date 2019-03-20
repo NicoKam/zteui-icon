@@ -36,10 +36,10 @@ const newIcon = singleIcon.map((t) => {
   const end = t.indexOf("\"", start);
   const id = t.substr(start, end - start)
     .replace("zteicon-", "");
-  const hasIcon = /fill="[^"]+"/.test(t);
+  const hasColor = /fill="[^"]+"/.test(t);
   let res = t;
-  if (!svgCache[id] && hasIcon) {
-    return res = t.replace(/fill="[^"]+"/g, "");
+  if (!svgCache[id] && hasColor) {
+    res = t.replace(/fill="[^"]+"/g, "");
   }
   jsLine[id] = toJson(res);
   return res;

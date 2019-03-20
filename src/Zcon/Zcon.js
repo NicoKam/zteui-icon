@@ -74,7 +74,7 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       const prefixCls = `${PREFIX} ${antCls ? "anticon" : ""}`;
       let children = <use xlinkHref={`#${p}-${(type)}`} />;
 
-      let hasCache = p === PREFIX && IconCache[type];
+      const hasCache = p === PREFIX && IconCache[type];
       if (hasCache) {
         children = IconCache[type].map((props, index) => (
           <path key={`${p}-${type}-${index}`} {...props} />));
