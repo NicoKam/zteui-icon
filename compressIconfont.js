@@ -14,16 +14,36 @@ const svgtext = text.substr(startIndex, endIndex - startIndex);
 
 const separator = "</symbol><symbol";
 const singleIcon = svgtext.split(separator);
+const jsLine = {};
+
+
+const toJson = (str) => {
+  const start = str.indexOf("<path");
+  const content = str.substr(start);
+  const contentArr = content.split("</path><path").map((subStr) => {
+    const res = {};
+    subStr.match(/\w+="[^"]+"/g).forEach((condition) => {
+      const [key, value] = condition.split("=");
+      res[key] = value.replace(/"/g, "");
+    });
+    return res;
+  });
+  return contentArr;
+};
+
 const newIcon = singleIcon.map((t) => {
   const start = t.indexOf("id=\"") + 4;
   const end = t.indexOf("\"", start);
   const id = t.substr(start, end - start)
     .replace("zteicon-", "");
   const hasIcon = /fill="[^"]+"/.test(t);
+  let res = t;
   if (!svgCache[id] && hasIcon) {
-    return t.replace(/fill="[^"]+"/g, "");
+    return res = t.replace(/fill="[^"]+"/g, "");
   }
-  return t;
+  jsLine[id] = toJson(res);
+  return res;
 });
 
 fs.writeFileSync("./assets/iconfont/iconfont.js", `${text.substr(0, startIndex)}${newIcon.join(separator)}${text.substr(endIndex)}`);
+fs.writeFileSync("./assets/iconfont/iconfont-es.js", `export default ${JSON.stringify(jsLine)}`);

@@ -1,3 +1,4 @@
-import Zcon from "./Zcon";
+import Zcon, { createPrefixIcon } from "./Zcon";
 
+export { createPrefixIcon };
 export default Zcon;

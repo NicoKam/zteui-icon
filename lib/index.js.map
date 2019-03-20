@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/index.js"],"names":["Zcon"],"mappings":";;;;;;AAAA;;;;;;kBAEeA,c","file":"index.js","sourcesContent":["import Zcon from './Zcon';\n\nexport default Zcon;\n"]}
+{"version":3,"sources":["../src/index.js"],"names":["createPrefixIcon","Zcon"],"mappings":";;;;;;;AAAA;;;;;;QAESA,gB,GAAAA,sB;kBACMC,c","file":"index.js","sourcesContent":["import Zcon, { createPrefixIcon } from \"./Zcon\";\n\nexport { createPrefixIcon };\nexport default Zcon;\n"]}

@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import svgDefault from "./svgIcon";
 import deprecatedIcon from "./deprecatedIcon";
 
-
-import "../../assets/iconfont/iconfont";
+import IconCache from "../../assets/iconfont/iconfont-es";
+// import "../../assets/iconfont/iconfont";
 import "../../assets/Zcon.css";
 // import "../../assets/iconfont/iconfont.css";
 
@@ -45,69 +45,76 @@ const typeFilter = (type) => {
   return type;
 };
 
-class Zcon extends Component {
-  getType = () => typeFilter(this.props.type);
+export const createPrefixIcon = (prefix = PREFIX) => {
+  class Zcon extends Component {
+    getType = () => typeFilter(this.props.type);
 
-  isSpin() {
-    const { spin } = this.props;
-    const type = this.getType()
-    if (spin) return true;
-    if (spin === false) return false;
-    return spinDefault.includes(type);
+    isSpin() {
+      const { spin } = this.props;
+      const type = this.getType();
+      if (spin) return true;
+      if (spin === false) return false;
+      return spinDefault.includes(type);
+    }
+
+    isSvg() {
+      const { svg } = this.props;
+      const type = this.getType();
+      if (svg === false) return false;
+      // if (svg && svgDefault.includes(type)) return true;
+      return svgDefault.includes(type);
+    }
+
+    render() {
+      const {
+        spin, svg, style, className, antCls, prefix: p, ...otherProps
+      } = this.props;
+      const type = this.getType();
+
+      const prefixCls = `${PREFIX} ${antCls ? "anticon" : ""}`;
+      let children = <use xlinkHref={`#${p}-${(type)}`} />;
+
+      let hasCache = p === PREFIX && IconCache[type];
+      if (hasCache) {
+        children = IconCache[type].map((props, index) => (
+          <path key={`${p}-${type}-${index}`} {...props} />));
+      }
+
+      return (
+        <svg
+          className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ""}`}
+          aria-hidden="true"
+          style={Object.assign({}, style)}
+          viewBox={hasCache ? "0 0 1024 1024" : ""}
+          {...otherProps}
+        >
+          {
+            children
+          }
+        </svg>
+      );
+    }
   }
 
-  isSvg() {
-    const { svg } = this.props;
-    const type = this.getType()
-    if (svg === false) return false;
-    // if (svg && svgDefault.includes(type)) return true;
-    return svgDefault.includes(type);
-  }
+  Zcon.propTypes = {
+    className: PropTypes.string,
+    prefix: PropTypes.string,
+    style: PropTypes.object,
+    antCls: PropTypes.bool,
+    type: PropTypes.string.isRequired,
+    spin: PropTypes.bool,
+    svg: PropTypes.bool,
+  };
 
-  render() {
-    const {
-      spin, svg, style, className, antCls, ...otherProps
-    } = this.props;
-    const type = this.getType();
-
-    const prefixCls = `${PREFIX} ${antCls ? "anticon" : ""}`;
-
-    return (
-      <svg
-        className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ""}`}
-        aria-hidden="true"
-        style={Object.assign({}, style)}
-        {...otherProps}
-      >
-        <use xlinkHref={`#${px(type)}`} />
-      </svg>
-    );
-
-    // return (
-    //   <i
-    //     className={`${prefixCls} ${classnames(type, { spin: this.isSpin() })} ${className || ""}`}
-    //     style={Object.assign({}, style)}
-    //     {...otherProps}
-    //   />
-    // );
-  }
-}
-
-Zcon.propTypes = {
-  className: PropTypes.string,
-  style: PropTypes.object,
-  antCls: PropTypes.bool,
-  type: PropTypes.string.isRequired,
-  spin: PropTypes.bool,
-  svg: PropTypes.bool,
+  Zcon.defaultProps = {
+    className: undefined,
+    prefix,
+    style: {},
+    spin: undefined,
+    svg: undefined,
+    antCls: false,
+  };
+  return Zcon;
 };
 
-Zcon.defaultProps = {
-  className: undefined,
-  style: {},
-  spin: undefined,
-  svg: undefined,
-  antCls: false,
-};
-
-export default Zcon;
+export default createPrefixIcon();
