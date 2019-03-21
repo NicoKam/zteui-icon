@@ -15,7 +15,7 @@ const svgtext = text.substr(startIndex, endIndex - startIndex);
 const separator = "</symbol><symbol";
 const singleIcon = svgtext.split(separator);
 const jsLine = {};
-
+const specialViewBox = {};
 
 const toJson = (str) => {
   const start = str.indexOf("<path");
@@ -37,6 +37,13 @@ const newIcon = singleIcon.map((t) => {
   const id = t.substr(start, end - start)
     .replace("zteicon-", "");
   const hasColor = /fill="[^"]+"/.test(t);
+  const viewBox = t.match(/viewBox="[^"]+"/);
+  if (viewBox.length === 1) {
+    const viewBoxValue = viewBox[0].split("=")[1].replace(/"/g, "");
+    if (viewBoxValue !== "0 0 1024 1024") {
+      specialViewBox[id] = viewBoxValue;
+    }
+  }
   let res = t;
   if (!svgCache[id] && hasColor) {
     res = t.replace(/fill="[^"]+"/g, "");
@@ -46,4 +53,4 @@ const newIcon = singleIcon.map((t) => {
 });
 
 fs.writeFileSync("./assets/iconfont/iconfont.js", `${text.substr(0, startIndex)}${newIcon.join(separator)}${text.substr(endIndex)}`);
-fs.writeFileSync("./assets/iconfont/iconfont-es.js", `export default ${JSON.stringify(jsLine)}`);
+fs.writeFileSync("./assets/iconfont/iconfont-es.js", `export default ${JSON.stringify(jsLine)}; \n export const specialViewBox = ${JSON.stringify(specialViewBox)}`);
