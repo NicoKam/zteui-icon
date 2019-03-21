@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import svgDefault from "./svgIcon";
 import deprecatedIcon from "./deprecatedIcon";
 
-import IconCache from "../../assets/iconfont/iconfont-es";
+import IconCache, { specialViewBox } from "../../assets/iconfont/iconfont-es";
 // import "../../assets/iconfont/iconfont";
 import "../../assets/Zcon.css";
 // import "../../assets/iconfont/iconfont.css";
@@ -47,7 +47,10 @@ const typeFilter = (type) => {
 
 export const createPrefixIcon = (prefix = PREFIX) => {
   class Zcon extends Component {
-    getType = () => typeFilter(this.props.type);
+    getType = () => {
+      const { type } = this.props;
+      return typeFilter(type);
+    };
 
     isSpin() {
       const { spin } = this.props;
@@ -65,9 +68,18 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       return svgDefault.includes(type);
     }
 
+    getViewBox = (p, type) => {
+      const { viewBox } = this.props;
+      if (viewBox) return viewBox;
+      if (p === PREFIX && specialViewBox[type]) {
+        return specialViewBox[type];
+      }
+      return "0 0 1024 1024";
+    };
+
     render() {
       const {
-        spin, svg, style, className, antCls, prefix: p, ...otherProps
+        spin, svg, style, className, antCls, prefix: p, viewBox, ...otherProps
       } = this.props;
       const type = this.getType();
 
@@ -85,7 +97,7 @@ export const createPrefixIcon = (prefix = PREFIX) => {
           className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ""}`}
           aria-hidden="true"
           style={Object.assign({}, style)}
-          viewBox={hasCache ? "0 0 1024 1024" : ""}
+          viewBox={this.getViewBox(p, type)}
           {...otherProps}
         >
           {
@@ -99,6 +111,7 @@ export const createPrefixIcon = (prefix = PREFIX) => {
   Zcon.propTypes = {
     className: PropTypes.string,
     prefix: PropTypes.string,
+    viewBox: PropTypes.string,
     style: PropTypes.object,
     antCls: PropTypes.bool,
     type: PropTypes.string.isRequired,
@@ -108,6 +121,7 @@ export const createPrefixIcon = (prefix = PREFIX) => {
 
   Zcon.defaultProps = {
     className: undefined,
+    viewBox: undefined,
     prefix,
     style: {},
     spin: undefined,

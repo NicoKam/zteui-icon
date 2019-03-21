@@ -5,6 +5,7 @@ export default [
   {
     title: "未分类",
     icons: [
+      { code: "system-configuration", text: "", tag: "new" },
       { code: "turn-back1", text: "", tag: "new" },
       { code: "turn-back", text: "", tag: "new" },
       { code: "turn-right1", text: "", tag: "new" },
