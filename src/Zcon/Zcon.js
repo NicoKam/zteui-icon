@@ -69,17 +69,9 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       return spinDefault.includes(type);
     }
 
-    isSvg() {
-      const { svg } = this.props;
-      const type = this.getType();
-      if (svg === false) return false;
-      // if (svg && svgDefault.includes(type)) return true;
-      return svgDefault.includes(type);
-    }
-
     render() {
       const {
-        spin, svg, style, className, antCls, prefix: p, viewBox, ...otherProps
+        spin, style, className, antCls, prefix: p, viewBox, ...otherProps
       } = this.props;
       const type = this.getType();
 
@@ -99,7 +91,7 @@ export const createPrefixIcon = (prefix = PREFIX) => {
           style={Object.assign({}, style)}
           {...otherProps}
         >
-          <svg viewBox={hasCache ? "0 0 1024 1024" : ""}>
+          <svg viewBox={this.getViewBox()}>
             {
               children
             }
@@ -117,7 +109,6 @@ export const createPrefixIcon = (prefix = PREFIX) => {
     antCls: PropTypes.bool,
     type: PropTypes.string.isRequired,
     spin: PropTypes.bool,
-    svg: PropTypes.bool,
   };
 
   Zcon.defaultProps = {
@@ -126,7 +117,6 @@ export const createPrefixIcon = (prefix = PREFIX) => {
     prefix,
     style: {},
     spin: undefined,
-    svg: undefined,
     antCls: false,
   };
   return Zcon;
