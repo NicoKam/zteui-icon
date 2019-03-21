@@ -32,7 +32,7 @@ i.zteicon:before {
   display: inline-block;
 }
 
-svg.zteicon-spin,
+.zteicon-spin svg,
 .zteicon-spin:before {
   display: inline-block;
   -webkit-animation: zteiconLoadingCircle 1s infinite linear;

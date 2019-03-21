@@ -91,7 +91,7 @@ export const createPrefixIcon = (prefix = PREFIX) => {
           style={Object.assign({}, style)}
           {...otherProps}
         >
-          <svg viewBox={this.getViewBox()}>
+          <svg viewBox={this.getViewBox(p, type)}>
             {
               children
             }
