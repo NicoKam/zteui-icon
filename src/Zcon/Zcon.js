@@ -81,17 +81,21 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       }
 
       return (
-        <svg
+        <i
           className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ""}`}
           aria-hidden="true"
           style={Object.assign({}, style)}
-          viewBox={hasCache ? "0 0 1024 1024" : ""}
+
           {...otherProps}
         >
-          {
-            children
-          }
-        </svg>
+          <svg
+            viewBox={hasCache ? "0 0 1024 1024" : ""}
+          >
+            {
+              children
+            }
+          </svg>
+        </i>
       );
     }
   }
