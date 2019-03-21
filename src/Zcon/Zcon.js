@@ -52,6 +52,15 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       return typeFilter(type);
     };
 
+    getViewBox = (p, type) => {
+      const { viewBox } = this.props;
+      if (viewBox) return viewBox;
+      if (p === PREFIX && specialViewBox[type]) {
+        return specialViewBox[type];
+      }
+      return "0 0 1024 1024";
+    };
+
     isSpin() {
       const { spin } = this.props;
       const type = this.getType();
@@ -67,15 +76,6 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       // if (svg && svgDefault.includes(type)) return true;
       return svgDefault.includes(type);
     }
-
-    getViewBox = (p, type) => {
-      const { viewBox } = this.props;
-      if (viewBox) return viewBox;
-      if (p === PREFIX && specialViewBox[type]) {
-        return specialViewBox[type];
-      }
-      return "0 0 1024 1024";
-    };
 
     render() {
       const {
@@ -93,17 +93,18 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       }
 
       return (
-        <svg
+        <i
           className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ""}`}
           aria-hidden="true"
           style={Object.assign({}, style)}
-          viewBox={this.getViewBox(p, type)}
           {...otherProps}
         >
-          {
-            children
-          }
-        </svg>
+          <svg viewBox={hasCache ? "0 0 1024 1024" : ""}>
+            {
+              children
+            }
+          </svg>
+        </i>
       );
     }
   }
