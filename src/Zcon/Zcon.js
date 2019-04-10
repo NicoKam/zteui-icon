@@ -52,22 +52,6 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       return typeFilter(type);
     };
 
-    isSpin() {
-      const { spin } = this.props;
-      const type = this.getType();
-      if (spin) return true;
-      if (spin === false) return false;
-      return spinDefault.includes(type);
-    }
-
-    isSvg() {
-      const { svg } = this.props;
-      const type = this.getType();
-      if (svg === false) return false;
-      // if (svg && svgDefault.includes(type)) return true;
-      return svgDefault.includes(type);
-    }
-
     getViewBox = (p, type) => {
       const { viewBox } = this.props;
       if (viewBox) return viewBox;
@@ -77,9 +61,17 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       return "0 0 1024 1024";
     };
 
+    isSpin() {
+      const { spin } = this.props;
+      const type = this.getType();
+      if (spin) return true;
+      if (spin === false) return false;
+      return spinDefault.includes(type);
+    }
+
     render() {
       const {
-        spin, svg, style, className, antCls, prefix: p, viewBox, ...otherProps
+        spin, style, className, antCls, prefix: p, viewBox, ...otherProps
       } = this.props;
       const type = this.getType();
 
@@ -93,17 +85,18 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       }
 
       return (
-        <svg
-          className={`${prefixCls} ${classnames(type, { spin: this.isSpin() })} ${className || ""}`}
+        <i
+          className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ""}`}
           aria-hidden="true"
           style={Object.assign({}, style)}
-          viewBox={this.getViewBox(p, type)}
           {...otherProps}
         >
-          {
-            children
-          }
-        </svg>
+          <svg viewBox={this.getViewBox(p, type)}>
+            {
+              children
+            }
+          </svg>
+        </i>
       );
     }
   }
@@ -116,7 +109,6 @@ export const createPrefixIcon = (prefix = PREFIX) => {
     antCls: PropTypes.bool,
     type: PropTypes.string.isRequired,
     spin: PropTypes.bool,
-    svg: PropTypes.bool,
   };
 
   Zcon.defaultProps = {
@@ -125,7 +117,6 @@ export const createPrefixIcon = (prefix = PREFIX) => {
     prefix,
     style: {},
     spin: undefined,
-    svg: undefined,
     antCls: false,
   };
   return Zcon;

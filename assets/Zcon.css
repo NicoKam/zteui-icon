@@ -1,46 +1,49 @@
 .anticon.zteicon {
-    font-family:"zteicon" !important;
+  font-family: "zteicon" !important;
 }
 
 .zteicon {
-    display: inline-block;
-    font-style: normal;
-    vertical-align: baseline;
-    text-align: center;
-    text-transform: none;
-    line-height: 1;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  vertical-align: baseline;
+  text-align: center;
+  text-transform: none;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 i.zteicon:before {
-    display: block;
+  display: block;
 }
 
-svg.zteicon {
-    /* 通过设置 font-size 来改变图标大小 */
-    width: 1em; height: 1em;
-    /* 图标和文字相邻时，垂直对齐 */
-    vertical-align: -0.15em;
-    /* 通过设置 color 来改变 SVG 的颜色/fill */
-    fill: currentColor;
-    /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
-       normalize.css 中也包含这行 */
-    overflow: hidden;
+.zteicon svg {
+  /* 通过设置 font-size 来改变图标大小 */
+  width: 1em;
+  height: 1em;
+  /* 图标和文字相邻时，垂直对齐 */
+  vertical-align: -0.15em;
+  /* 通过设置 color 来改变 SVG 的颜色/fill */
+  fill: currentColor;
+  /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+     normalize.css 中也包含这行 */
+  overflow: hidden;
+  display: inline-block;
 }
-svg.zteicon-spin,
+
+.zteicon-spin svg,
 .zteicon-spin:before {
-    display: inline-block;
-    -webkit-animation: zteiconLoadingCircle 1s infinite linear;
-    animation: zteiconLoadingCircle 1s infinite linear;
+  display: inline-block;
+  -webkit-animation: zteiconLoadingCircle 1s infinite linear;
+  animation: zteiconLoadingCircle 1s infinite linear;
 }
 
 @keyframes zteiconLoadingCircle {
-    from {
-        transform: rotate(0deg);
-    }
-    from {
-        transform: rotate(-360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(-360deg);
+  }
 }
