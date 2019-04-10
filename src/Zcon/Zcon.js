@@ -71,7 +71,7 @@ export const createPrefixIcon = (prefix = PREFIX) => {
 
     render() {
       const {
-        spin, style, className, antCls, prefix: p, viewBox, ...otherProps
+        spin, style, className, antCls, prefix: p, viewBox, type: noUse, ...otherProps
       } = this.props;
       const type = this.getType();
 
@@ -84,9 +84,11 @@ export const createPrefixIcon = (prefix = PREFIX) => {
           <path key={`${p}-${type}-${index}`} {...props} />));
       }
 
+      const typeClass = `${p}-${type}`;
+
       return (
         <i
-          className={`${prefixCls} ${classnames({ spin: this.isSpin() })} ${className || ""}`}
+          className={`${prefixCls} ${typeClass} ${classnames({ spin: this.isSpin() })} ${className || ""}`}
           aria-hidden="true"
           style={Object.assign({}, style)}
           {...otherProps}
