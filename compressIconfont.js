@@ -1,4 +1,6 @@
 const fs = require("fs");
+const changeCase = require("change-case");
+
 const svgIcon = require("./src/Zcon/svgIcon");
 
 const svgCache = {};
@@ -53,4 +55,15 @@ const newIcon = singleIcon.map((t) => {
 });
 
 fs.writeFileSync("./assets/iconfont/iconfont.js", `${text.substr(0, startIndex)}${newIcon.join(separator)}${text.substr(endIndex)}`);
-fs.writeFileSync("./assets/iconfont/iconfont-es.js", `export default ${JSON.stringify(jsLine)}; \n export const specialViewBox = ${JSON.stringify(specialViewBox)}`);
+fs.writeFileSync("./assets/iconfont/iconfont-es.dev.js", `export default ${JSON.stringify(jsLine)}; \n export const specialViewBox = ${JSON.stringify(specialViewBox)}`);
+
+
+/* 模块化 */
+
+const moduleString = Object.keys(jsLine).map((key) => {
+  const camelKey = changeCase.camelCase(`icon-${key}`).replace(/_/g, "");
+  return `export const ${camelKey} = ${JSON.stringify(jsLine[key])};\n\n`;
+}).join("");
+
+fs.writeFileSync("./assets/iconfont/iconfont-modules.js", `${moduleString} export const specialViewBox = ${JSON.stringify(specialViewBox)}`);
+

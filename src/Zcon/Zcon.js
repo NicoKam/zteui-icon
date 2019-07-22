@@ -1,13 +1,11 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import svgDefault from "./svgIcon";
 import deprecatedIcon from "./deprecatedIcon";
 
+// eslint-disable-next-line import/named
 import IconCache, { specialViewBox } from "../../assets/iconfont/iconfont-es";
-// import "../../assets/iconfont/iconfont";
 import "../../assets/Zcon.css";
-// import "../../assets/iconfont/iconfont.css";
 
 const PREFIX = "zteicon";
 
@@ -38,6 +36,7 @@ const typeFilter = (type) => {
     const newType = deprecatedIcon[type];
     if (!deprecatedLog[type]) {
       deprecatedLog[type] = 1;
+      /* eslint-disable-next-line no-console */
       console.error(`[警告]您当前使用的图标 ${type} 已被修改为 ${newType} 。请更换新的名称`);
     }
     return newType;
@@ -61,13 +60,13 @@ export const createPrefixIcon = (prefix = PREFIX) => {
       return "0 0 1024 1024";
     };
 
-    isSpin() {
+    isSpin = () => {
       const { spin } = this.props;
       const type = this.getType();
       if (spin) return true;
       if (spin === false) return false;
       return spinDefault.includes(type);
-    }
+    };
 
     render() {
       const {
