@@ -26,7 +26,7 @@ if (fs.existsSync(path.resolve(cwd, ".cbdicon.js"))) {
   }
 }
 
-console.log(`增在分析：${config.srcRoot}`);
+console.log(`cbd-icon-compress 增在分析：${config.srcRoot}`);
 
 const fileList = getFileList(config.srcRoot);
 
