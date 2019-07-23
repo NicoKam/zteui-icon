@@ -55,7 +55,7 @@ const newIcon = singleIcon.map((t) => {
 });
 
 fs.writeFileSync("./assets/iconfont/iconfont.js", `${text.substr(0, startIndex)}${newIcon.join(separator)}${text.substr(endIndex)}`);
-fs.writeFileSync("./assets/iconfont/iconfont-es.dev.js", `export default ${JSON.stringify(jsLine)}; \n export const specialViewBox = ${JSON.stringify(specialViewBox)}`);
+fs.writeFileSync("./assets/iconfont/iconfont-es.dev.js", `module.exports = ${JSON.stringify({ icon: jsLine, specialViewBox })};`);
 
 
 /* 模块化 */

@@ -4,12 +4,14 @@ import PropTypes from "prop-types";
 import deprecatedIcon from "./deprecatedIcon";
 
 // eslint-disable-next-line import/named
-import IconCache, { specialViewBox } from "../../assets/iconfont/iconfont-es";
+import icon from "../../assets/iconfont";
 import "../../assets/Zcon.css";
 
 const PREFIX = "zteicon";
 
 const px = (clsName) => `${PREFIX}-${clsName}`;
+
+const { icon: IconCache, specialViewBox } = icon;
 
 const classnames = (...args) => args.map((classname) => {
   if (typeof classname === "string") {
