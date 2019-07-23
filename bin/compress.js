@@ -7,7 +7,7 @@ const root = path.resolve(process.cwd(), "src");
 
 const testRoot = "P:\\project\\party-building-screen-fe\\src";
 
-const fileList = getFileList(testRoot);
+const fileList = getFileList(root);
 
 let iconUsage = [];
 
