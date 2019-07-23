@@ -2,16 +2,14 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import deprecatedIcon from "./deprecatedIcon";
-
-// eslint-disable-next-line import/named
-import icon from "../../assets/iconfont";
+import iconfont from "../../assets/iconfont";
 import "../../assets/Zcon.css";
 
 const PREFIX = "zteicon";
 
 const px = (clsName) => `${PREFIX}-${clsName}`;
 
-const { icon: IconCache, specialViewBox } = icon;
+const { icon: IconCache, specialViewBox } = iconfont;
 
 const classnames = (...args) => args.map((classname) => {
   if (typeof classname === "string") {
@@ -50,7 +48,10 @@ export const createPrefixIcon = (prefix = PREFIX) => {
   class Zcon extends Component {
     getType = () => {
       const { type } = this.props;
-      return typeFilter(type);
+      if (typeof type === "string") {
+        return typeFilter(type);
+      }
+      return type;
     };
 
     getViewBox = (p, type) => {
@@ -72,17 +73,24 @@ export const createPrefixIcon = (prefix = PREFIX) => {
 
     render() {
       const {
-        spin, style, className, antCls, prefix: p, viewBox, type: noUse, ...otherProps
+        spin, style, className, antCls, prefix: p, viewBox, type: noUse, icon, ...otherProps
       } = this.props;
       const type = this.getType();
 
       const prefixCls = `${PREFIX} ${antCls ? "anticon" : ""}`;
       let children = <use xlinkHref={`#${p}-${(type)}`} />;
 
-      const hasCache = p === PREFIX && IconCache[type];
-      if (hasCache) {
-        children = IconCache[type].map((props, index) => (
+      if (typeof icon === "object") {
+        /* 如果type是object类型，说明自定义传入了icon，所以直接使用type传入的配置即可 */
+        children = icon.map((props, index) => (
           <path key={`${p}-${type}-${index}`} {...props} />));
+      } else {
+        /* 从预设的Icon中获取 */
+        const hasCache = p === PREFIX && IconCache[type];
+        if (hasCache) {
+          children = IconCache[type].map((props, index) => (
+            <path key={`${p}-${type}-${index}`} {...props} />));
+        }
       }
 
       const typeClass = `${p}-${type}`;
@@ -111,6 +119,7 @@ export const createPrefixIcon = (prefix = PREFIX) => {
     style: PropTypes.object,
     antCls: PropTypes.bool,
     type: PropTypes.string.isRequired,
+    icon: PropTypes.arrayOf(PropTypes.object),
     spin: PropTypes.bool,
   };
 
@@ -120,6 +129,7 @@ export const createPrefixIcon = (prefix = PREFIX) => {
     prefix,
     style: {},
     spin: undefined,
+    icon: undefined,
     antCls: false,
   };
   return Zcon;

@@ -1,1 +1,1 @@
-module.exports = require("./iconfont-es.dev");
+module.exports = {"icon":{},"specialViewBox":{}};

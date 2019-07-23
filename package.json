@@ -12,7 +12,7 @@
     "bin"
   ],
   "scripts": {
-    "compress-test": "node bin/compress.js",
+    "compress-test": "node $NODE_DEBUG_OPTION bin/compress.js",
     "clean": "git fetch --all &  git reset --hard origin/master & git pull",
     "compress": "node compressIconfont.js",
     "compile": "npm run compress && babel src -d lib -s",
