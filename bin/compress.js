@@ -13,7 +13,7 @@ let config = {
   icon: [],
   iconDependencyName: "@cbd/icon",
   showUnknowIconDetail: true,
-  showIconDetail: true,
+  showIconDetail: false,
 };
 if (fs.existsSync(path.resolve(cwd, ".cbdicon.js"))) {
   try {
@@ -44,20 +44,29 @@ const icon = require("../assets/iconfont/iconfont-es.dev");
 const newIcon = {};
 const newSpecialViewBox = {};
 
+const copyIcon = (iconType) => {
+  if (icon.icon[iconType]) {
+    newIcon[iconType] = icon.icon[iconType];
+  }
+  if (icon.specialViewBox[iconType]) {
+    newSpecialViewBox[iconType] = icon.specialViewBox[iconType];
+  }
+};
+
+/* 复制预设Icon */
+config.icon.forEach(copyIcon);
+
 const iconCache = {};
 const unknowIcon = [];
+
 iconUsage.forEach((item) => {
   const { unknow, value, start, end, loc, data, filePath } = item;
   if (unknow) {
     unknowIcon.push(item);
   } else {
     iconCache[value] = item;
-    if (icon.icon[value]) {
-      newIcon[value] = icon.icon[value];
-    }
-    if (icon.specialViewBox[value]) {
-      newSpecialViewBox[value] = icon.specialViewBox[value];
-    }
+    /* 复制已知Icon */
+    copyIcon(value);
   }
 });
 
@@ -78,6 +87,10 @@ if (unknowIcon.length && config.showUnknowIconDetail) {
   });
 }
 
+if (config.icon.length && config.showIconDetail) {
+  console.log(`从配置文件中读取到需要生成的icon:${JSON.stringify(config.icon)}`);
+}
+
 if (iconUsage.length && config.showIconDetail) {
   console.log(`共分析到${iconUsage.length}个已使用图标`);
   iconUsage.forEach(({ loc, filePath, data }) => {
@@ -88,4 +101,5 @@ if (iconUsage.length && config.showIconDetail) {
 }
 
 
-console.log(`@cbd/icon压缩完毕，共导出${Object.keys(iconCache).length}个图标`);
+console.log(`@cbd/icon压缩完毕，共导出${Object.keys(newIcon).length}个图标:`);
+console.log(JSON.stringify(Object.keys(newIcon)));
