@@ -1,6 +1,6 @@
 {
   "name": "zteui-icon",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "An icon component for ReactJS.",
   "main": "lib/index.js",
   "bin": {
