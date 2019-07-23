@@ -69,12 +69,12 @@ const joinTemplate = (template) => {
  * @param body
  * @returns {boolean}
  */
-const isIconUsed = (body = []) => {
+const isIconUsed = (body = [], iconDepName = "@cbd/icon") => {
   for (let i = 0; i < body.length; i += 1) {
     const node = body[i];
     /* 如果是import声明 */
     if (node.type === "ImportDeclaration") {
-      if (node.source.value === "@cbd/icon") {
+      if (node.source.value === iconDepName) {
         /* 引入了Icon */
         const defaultImport = node.specifiers.find(({ type }) => type === "ImportDefaultSpecifier");
         if (defaultImport) {
@@ -88,7 +88,7 @@ const isIconUsed = (body = []) => {
   return false;
 };
 
-module.exports = (filePath) => {
+module.exports = (filePath, iconDepName) => {
   let usage = [];
   const data = fs.readFileSync(filePath, "utf8");
 
@@ -198,7 +198,7 @@ module.exports = (filePath) => {
     if (astTree.type === "File") {
       const { program } = astTree;
       if (program && program.type === "Program") {
-        const iconName = isIconUsed(program.body);
+        const iconName = isIconUsed(program.body, iconDepName);
         if (iconName) {
           /* 有使用@cbd/icon */
           findIconUsage(iconName, program);
